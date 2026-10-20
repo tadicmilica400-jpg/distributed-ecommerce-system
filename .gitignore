@@ -1,0 +1,22 @@
+# NetBeans and Java build output
+**/build/
+**/dist/
+**/nbproject/private/
+*.class
+*.jar
+*.war
+
+# IDE and operating-system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local configuration and credentials
+*.env
+.env.*
+*credentials*
+*secrets*
+*sifre*
+private.properties
+private.xml

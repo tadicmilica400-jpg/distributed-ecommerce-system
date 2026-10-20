@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+             xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+
+    <persistence-unit name="is1TransakcijePU" transaction-type="RESOURCE_LOCAL">
+        <class>podsistem3_transakcije.Narudzbina</class>
+        <class>podsistem3_transakcije.Stavka</class>
+        <class>podsistem3_transakcije.Transakcija</class>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://127.0.0.1:3306/is1_transakcije?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=UTC"/>
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.password" value=""/>
+            <property name="eclipselink.logging.level" value="WARNING"/>
+            <property name="eclipselink.ddl-generation" value="none"/>
+        </properties>
+    </persistence-unit>
+
+    <!-- Za citanje novca korisnika -->
+    <persistence-unit name="is1KorisniciPU" transaction-type="RESOURCE_LOCAL">
+        <class>podsistem3_transakcije.Korisnik</class>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://127.0.0.1:3306/is1_korisnici?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=UTC"/>
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.password" value=""/>
+            <property name="eclipselink.logging.level" value="WARNING"/>
+            <property name="eclipselink.ddl-generation" value="none"/>
+        </properties>
+    </persistence-unit>
+
+    <!-- Za native SQL citanje korpe i brisanje nakon placanja -->
+    <persistence-unit name="is1ProdajaPU" transaction-type="RESOURCE_LOCAL">
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://127.0.0.1:3306/is1_prodaja?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=UTC"/>
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.password" value=""/>
+            <property name="eclipselink.logging.level" value="WARNING"/>
+            <property name="eclipselink.ddl-generation" value="none"/>
+        </properties>
+    </persistence-unit>
+
+</persistence>

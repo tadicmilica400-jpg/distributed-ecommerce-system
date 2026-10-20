@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+             xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+
+    <persistence-unit name="is1ProdajaPU" transaction-type="RESOURCE_LOCAL">
+        <class>podsistem2_prodaja.Artikal</class>
+        <class>podsistem2_prodaja.Kategorija</class>
+        <class>podsistem2_prodaja.Korpa</class>
+        <class>podsistem2_prodaja.KorpaArtikal</class>
+        <class>podsistem2_prodaja.ListaZelja</class>
+        <class>podsistem2_prodaja.ListaZeljaArtikal</class>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://127.0.0.1:3306/is1_prodaja?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=UTC"/>
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.password" value=""/>
+            <property name="eclipselink.logging.level" value="WARNING"/>
+            <property name="eclipselink.ddl-generation" value="none"/>
+            <property name="eclipselink.cache.shared.default" value="false"/>
+        </properties>
+    </persistence-unit>
+
+</persistence>
